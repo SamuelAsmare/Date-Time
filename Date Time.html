@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" width="device-width, initial-scale=1.0" >
+        <title>date Time</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+    body{
+        background:url("timeb.avif");
+        background-repeat:no-repeat;
+        background-size:cover;
+
+            }
+   .divi{
+
+    text-align:center;
+    border:3px solid rgb(208, 202, 210);
+    border-radius:10px 2px 40px 10px;
+    position:absolute;
+   
+    width:25%;
+    top:100px;
+    left:330px;
+    height:400px;
+    padding :30px;
+    transition:1s ease;
+    background-color:transparent;
+    backdrop-filter:blur(5px);
+    box-shadow: 0px 0px 1px 3px rgba(245, 249, 249, 0.952);
+    
+
+
+   }
+   .divi:hover{
+    transform:scale(1.01);
+
+   }
+   .time{
+    color:rgb(83, 223, 155);
+    margin:20px 30px 20px 20px;
+
+   }
+   .time2{
+    
+    height:40px;
+    border-radius:10px;
+    color:white;
+    margin:40px;
+   }
+        </style>
+
+    </head>
+    <body>
+        <div class="divi">
+            <h1 class="time">
+                Time
+            </h1>
+        <h1 class="time2" id="dis"><br><br><br></h1>
+        </div>
+
+        <script>
+            const sam=()=>{
+                    setInterval(()=>{
+                        s=new Date();
+                        let tod;
+                        if(s.getDay()==1){
+                             tod="Monday";
+                        }
+                        if(s.getDay()==2){
+                             tod="Tuesday";
+                        }
+                        if(s.getDay()==3){
+                             tod="Wednsday";
+                        }
+                        if(s.getDay()==4){
+                             tod="Thursday";
+                        }
+                        if(s.getDay()==5){
+                             tod="Friday";
+                        }
+                        if(s.getDay()==6){
+                             tod="Saturday";
+                        }
+                        if(s.getDay()==7){
+                             tod="Sunday";
+                        }
+                        let month;
+                        if(s.getMonth()==1){
+                            month="January";
+                        }
+                        if(s.getMonth()==2){
+                            month="February";
+                        }
+                        if(s.getMonth()==3){
+                            month="March";
+                        }
+                        if(s.getMonth()==4){
+                            month="April";
+                        }
+                        if(s.getMonth()==5){
+                            month="May";
+                        }
+                        if(s.getMonth()==6){
+                            month="June";
+                        }
+                        if(s.getMonth()==7){
+                            month="July";
+                        }
+                        if(s.getMonth()==8){
+                            month="Augest";
+                        }
+                        if(s.getMonth()==9){
+                            month="September";
+                        }
+                        if(s.getMonth()==10){
+                            month="October";
+                        }
+                        if(s.getMonth()==11){
+                            month="November";
+                        }
+                        if(s.getMonth()==12){
+                            month="December";
+                        }
+                        
+                        document.getElementById('dis').innerHTML=tod +", " +month+" "+s.getDate()+ " <br>   "  +s.getHours()+" : "+s.getMinutes()+" : "+s.getSeconds();
+                    },1000);
+            }
+            sam()
+        </script>
+    </body>
+
+
+</html>
